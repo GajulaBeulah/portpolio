@@ -700,6 +700,21 @@
             color: #a0aec0;
             font-size: 0.85rem;
         }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .project-links a {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .project-links a:hover {
+            color: #2c5282;
+        }
         /* Certifications Section */
         .certifications-grid {
             display: grid;
@@ -754,6 +769,42 @@
         .achievement-card p {
             color: #4a5568;
             line-height: 1.6;
+        }
+        /* Languages & Hobbies Section */
+        .languages-hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .lh-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #38a169;
+        }
+        .lh-card h3 {
+            color: #38a169;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .lh-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .lh-card li {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .lh-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
         }
         /* Contact Section */
         .contact-section {
@@ -842,210 +893,52 @@
             padding: 2rem 0;
         }
         /* Responsive */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 15px;
-            }
-            .hero-text h1 {
-                font-size: 3.5rem;
-            }
-            .hero-text .subtitle {
-                font-size: 1.3rem;
-            }
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .background-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 1.5rem;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 1.5rem;
-            }
-            .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                gap: 2rem;
-            }
-            .certifications-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 1.5rem;
-            }
-            .achievements-grid {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                gap: 1.5rem;
-            }
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-        }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-            }
             .hero-content {
                 padding: 0 1rem;
             }
             .hero-text h1 {
-                font-size: 2.5rem;
-                line-height: 1.2;
+                font-size: 3rem;
             }
             .hero-text .subtitle {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             .hero-text .description {
-                font-size: 0.95rem;
-                line-height: 1.6;
+                font-size: 1rem;
             }
             .profile-img {
-                width: 120px;
-                height: 120px;
-                font-size: 3rem;
+                width: 150px;
+                height: 150px;
+                font-size: 4rem;
             }
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
             }
             .btn {
                 width: 100%;
-                max-width: 250px;
-                padding: 1rem 2rem;
-                font-size: 0.9rem;
+                max-width: 280px;
+                text-align: center;
             }
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 3rem;
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
-            .section-title::after {
-                width: 50px;
-                height: 3px;
+            .about-stats {
+                grid-template-columns: 1fr;
             }
-            section {
-                padding: 4rem 0;
-            }
-            .about-main {
-                padding: 2rem;
-            }
-            .about-quote {
-                padding: 1.5rem;
-            }
-            .about-quote::before {
-                font-size: 3rem;
-                top: -5px;
-                left: 15px;
-            }
-            .about-text-block {
-                padding: 1rem;
-            }
-            .about-card {
-                padding: 1.5rem;
-            }
-            .about-card-icon {
-                font-size: 2rem;
-            }
-            .about-card-value {
-                font-size: 1.5rem;
+            .background-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             .background-card {
-                padding: 1.5rem;
+                padding: 2rem;
             }
             .background-icon {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             .background-title {
-                font-size: 1.2rem;
-            }
-            .background-subtitle {
-                font-size: 1rem;
-            }
-            .background-description {
-                font-size: 0.9rem;
-            }
-            .skill-card {
-                padding: 2rem;
-            }
-            .skill-icon {
-                font-size: 2.5rem;
-            }
-            .skill-title {
-                font-size: 1.2rem;
-            }
-            .skill-list li {
-                font-size: 0.9rem;
-                padding: 0.7rem 0.9rem;
-            }
-            .project-card {
-                margin: 0 auto;
-                max-width: 100%;
-            }
-            .project-content {
-                padding: 1.5rem;
-            }
-            .project-title {
-                font-size: 1.2rem;
-            }
-            .project-description {
-                font-size: 0.9rem;
-            }
-            .tech-tag {
-                font-size: 0.75rem;
-                padding: 0.3rem 0.6rem;
-            }
-            .project-tools {
-                font-size: 0.8rem;
-            }
-            .cert-card {
-                padding: 1.5rem;
-            }
-            .cert-title {
-                font-size: 1rem;
-            }
-            .cert-provider {
-                font-size: 0.85rem;
-            }
-            .cert-date {
-                font-size: 0.8rem;
-            }
-            .achievement-card {
-                padding: 2rem;
-            }
-            .achievement-card h3 {
-                font-size: 1.1rem;
-            }
-            .contact-info h3 {
-                font-size: 1.2rem;
-                margin-bottom: 1.5rem;
-            }
-            .contact-item {
-                margin-bottom: 1.5rem;
-            }
-            .contact-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-                margin-right: 1rem;
-            }
-            .contact-text strong {
-                font-size: 0.9rem;
-            }
-            .contact-form {
-                padding: 2rem;
-            }
-            .form-group label {
-                font-size: 0.9rem;
-            }
-            .form-group input,
-            .form-group textarea {
-                padding: 0.8rem;
-                font-size: 0.9rem;
+                font-size: 1.3rem;
             }
             .nav-toggle {
                 display: flex;
@@ -1077,124 +970,13 @@
             nav a {
                 font-size: 1.2rem;
                 padding: 1rem;
-                color: #2d3748;
             }
-            nav a:hover {
-                color: #3182ce;
-            }
-            footer {
-                padding: 1.5rem 0;
-                font-size: 0.85rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 8px;
-            }
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            .hero-text .subtitle {
-                font-size: 1rem;
-            }
-            .hero-text .description {
-                font-size: 0.9rem;
-            }
-            .profile-img {
-                width: 100px;
-                height: 100px;
-                font-size: 2.5rem;
-            }
-            .btn {
-                max-width: 200px;
-                padding: 0.8rem 1.5rem;
-                font-size: 0.85rem;
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
-            }
-            section {
-                padding: 3rem 0;
-            }
-            .about-main {
-                padding: 1.5rem;
-            }
-            .about-quote {
-                padding: 1.2rem;
-            }
-            .about-quote p {
-                font-size: 0.95rem;
-            }
-            .about-text-block {
-                padding: 0.8rem;
-            }
-            .about-card {
-                padding: 1.2rem;
-            }
-            .about-card-icon {
-                font-size: 1.8rem;
-            }
-            .about-card-title {
-                font-size: 1rem;
-            }
-            .about-card-value {
-                font-size: 1.3rem;
-            }
-            .background-card {
-                padding: 1.2rem;
-            }
-            .background-icon {
                 font-size: 2rem;
-            }
-            .background-title {
-                font-size: 1.1rem;
-            }
-            .skill-card {
-                padding: 1.5rem;
-            }
-            .skill-icon {
-                font-size: 2rem;
-            }
-            .skill-title {
-                font-size: 1.1rem;
-            }
-            .project-content {
-                padding: 1.2rem;
-            }
-            .project-title {
-                font-size: 1.1rem;
-            }
-            .cert-card {
-                padding: 1.2rem;
-            }
-            .achievement-card {
-                padding: 1.5rem;
-            }
-            .achievement-card h3 {
-                font-size: 1rem;
-            }
-            .contact-form {
-                padding: 1.5rem;
-            }
-            .contact-info {
-                text-align: center;
-            }
-            .contact-item {
-                justify-content: center;
-                text-align: center;
-            }
-            .contact-icon {
-                margin-right: 0;
-                margin-bottom: 0.5rem;
-            }
-            nav a {
-                font-size: 1.1rem;
-                padding: 0.8rem;
-            }
-            footer {
-                font-size: 0.8rem;
             }
         }
     </style>
@@ -1282,7 +1064,7 @@
                     <div class="about-card">
                         <span class="about-card-icon">💼</span>
                         <div class="about-card-title">Projects</div>
-                        <div class="about-card-value">2</div>
+                        <div class="about-card-value">6</div>
                         <div class="about-card-desc">Completed development projects</div>
                     </div>
                     <div class="about-card">
@@ -1336,6 +1118,7 @@
                     <ul class="skill-list">
                         <li>JavaScript (ES6+)</li>
                         <li>Python</li>
+                        <li>GenAI</li>
                         <li>Problem Solving</li>
                         <li>Code Optimization</li>
                     </ul>
@@ -1357,6 +1140,7 @@
                         <li>Teamwork</li>
                         <li>Problem-Solving</li>
                         <li>Adaptability</li>
+                        <li>Logical Thinking</li>
                         <li>Attention to Detail</li>
                     </ul>
                 </div>
@@ -1392,28 +1176,76 @@
                     <div class="project-image">🌱</div>
                     <div class="project-content">
                         <h3 class="project-title">Garden E-Market</h3>
-                        <p class="project-description">Developed an online Garden E-Market for buying plants, seeds, pots, and gardening services. Features include Plantopedia for plant information and a unified, user-friendly platform that simplifies shopping and learning.</p>
+                        <p class="project-description">Developed an online Garden E-Market for buying plants, seeds, pots, and gardening services, featuring Plantopedia for plant information. Created a unified, user-friendly platform that simplifies shopping and learning while enhancing overall user experience.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
                         </div>
-                        <p class="project-tools"><strong>Tools:</strong> VS Code</p>
+                        <p class="project-tools"><strong>Tools:</strong> VS Code, MySQL</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">💼</div>
                     <div class="project-content">
                         <h3 class="project-title">Personal Portfolio Website</h3>
-                        <p class="project-description">Developed a personal portfolio website to showcase skills, projects, and achievements with a clean, responsive design. Included sections like About, Projects, and Contact to enhance user experience.</p>
+                        <p class="project-description">Developed a personal portfolio website to showcase skills, projects, and achievements with a clean, responsive design. Included sections like About, Projects, and Contact to enhance user experience and support personal branding.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Responsive</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
                         </div>
-                        <p class="project-tools"><strong>Tools:</strong> VS Code</p>
+                        <p class="project-tools"><strong>Tools:</strong> VS Code, MySQL</p>
+                        <div class="project-links">
+                            <a href="https://gajulabeulah.github.io/Portfolio/" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website using GenAI</h3>
+                        <p class="project-description">A portfolio website using Generative AI is a smart platform to showcase skills and projects with AI-generated content and design. It improves creativity, saves time, and provides a better user experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <p class="project-tools"><strong>Tools:</strong> ChatGPT, Copilot</p>
+                        <div class="project-links">
+                            <a href="https://gajulabeulah.github.io/portpolio/" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🏠</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Find My Room – Landing Page</h3>
+                        <p class="project-description">A responsive landing page designed to help users easily find rental rooms based on location, budget, and preferences. It features a clean UI, search functionality, and attractive design to improve user experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <p class="project-tools"><strong>Tools:</strong> ChatGPT, Copilot</p>
+                        <div class="project-links">
+                            <a href="https://gajulabeulah.github.io/finnd_my_room/" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎲</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Snake and Ladder using GenAI</h3>
+                        <p class="project-description">A simple Snake and Ladder game where AI helps make the game more interesting with smart features and better user experience. It can add ideas or improvements automatically to make gameplay fun.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <p class="project-tools"><strong>Tools:</strong> ChatGPT, Copilot</p>
+                        <div class="project-links">
+                            <a href="https://gajulabeulah.github.io/Beulah2/" target="_blank">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1637,672 +1469,4 @@
     </script>
 </body>
 </html>
-    <!-- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav li {
-            margin-left: 2.5rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-        nav a:hover {
-            opacity: 0.8;
-        }
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            padding-top: 80px;
-        }
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-        .hero .tagline {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.85;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero .highlight {
-            color: #ffeb3b;
-            font-weight: bold;
-        }
-        .btn {
-            display: inline-block;
-            background: #ffeb3b;
-            color: #333;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin: 0.5rem;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            border: 2px solid white;
-        }
-        section {
-            padding: 5rem 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #667eea;
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        .about-text {
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-        .about-text p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-        .about-image {
-            text-align: center;
-        }
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            color: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .skill-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-            font-weight: 600;
-        }
-        .skill-list {
-            list-style: none;
-            padding: 0;
-        }
-        .skill-list li {
-            background: #f8f9fa;
-            margin: 0.5rem 0;
-            padding: 0.7rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        .project-image {
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-        .project-content {
-            padding: 1.5rem;
-        }
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: 600;
-        }
-        .project-description {
-            color: #666;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .tech-tag {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .cert-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s;
-        }
-        .cert-card:hover {
-            transform: translateX(5px);
-        }
-        .cert-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        .cert-provider {
-            color: #667eea;
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
-        }
-        .cert-date {
-            color: #999;
-            font-size: 0.85rem;
-        }
-        .achievements-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .achievement-card {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-        .achievement-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        .achievement-card p {
-            color: #555;
-            line-height: 1.6;
-        }
-        .contact-section {
-            background: #f8f9fa;
-        }
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        .contact-info h3 {
-            margin-bottom: 1.5rem;
-            color: #333;
-            font-size: 1.2rem;
-        }
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 1rem;
-            flex-shrink: 0;
-            font-size: 1.2rem;
-        }
-        .contact-text {
-            line-height: 1.6;
-        }
-        .contact-text strong {
-            display: block;
-            margin-bottom: 0.2rem;
-            color: #333;
-        }
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            nav ul {
-                display: none;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">Gajula Beulah</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Gajula Beulah</span></h1>
-                <p class="subtitle">Full Stack Developer Trainee</p>
-                <p class="tagline">Motivated developer with expertise in HTML, CSS, JavaScript, Python, and MySQL. I create innovative web solutions and contribute to organizational growth.</p>
-                <a href="#projects" class="btn">View My Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a Full Stack Developer trainee currently training at Academy for Careers in Technology by Freshworks. With a strong foundation in web development technologies, I'm passionate about building user-friendly applications that solve real-world problems.</p>
-                    <p>My journey in tech began with curiosity about how modern web applications work. This led me to pursue comprehensive training in front-end, back-end, and full-stack development, where I've gained hands-on experience with industry-standard tools and technologies.</p>
-                    <p>Located in Hyderabad, I'm eager to apply my technical skills in an entry-level software development role and contribute meaningfully to innovative projects. I'm a quick learner with strong problem-solving abilities and a collaborative mindset.</p>
-                    <p><strong>Current Status:</strong> Pursuing Full Stack Development training | <strong>Location:</strong> Hyderabad | <strong>Contact:</strong> 8519847264</p>
-                </div>
-                <div class="about-image">
-                    <div class="profile-img">👩‍💻</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3 class="skill-title">Front-End Development</h3>
-                    <ul class="skill-list">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Bootstrap Framework</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3 class="skill-title">Programming Languages</h3>
-                    <ul class="skill-list">
-                        <li>JavaScript (ES6+)</li>
-                        <li>Python</li>
-                        <li>Problem Solving</li>
-                        <li>Code Optimization</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3 class="skill-title">Database & Tools</h3>
-                    <ul class="skill-list">
-                        <li>MySQL</li>
-                        <li>SQL Queries</li>
-                        <li>VS Code</li>
-                        <li>Git & GitHub</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎯</div>
-                    <h3 class="skill-title">Core Competencies</h3>
-                    <ul class="skill-list">
-                        <li>Teamwork</li>
-                        <li>Problem-Solving</li>
-                        <li>Adaptability</li>
-                        <li>Attention to Detail</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3 class="skill-title">Design & Productivity</h3>
-                    <ul class="skill-list">
-                        <li>Canva</li>
-                        <li>MS Word</li>
-                        <li>PowerPoint</li>
-                        <li>UI/UX Basics</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🚀</div>
-                    <h3 class="skill-title">Full Stack Development</h3>
-                    <ul class="skill-list">
-                        <li>Front-End Development</li>
-                        <li>Back-End Development</li>
-                        <li>Database Design</li>
-                        <li>Web Application Development</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🌱</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Garden E-Market</h3>
-                        <p class="project-description">Developed an online Garden E-Market for buying plants, seeds, pots, and gardening services. Features include Plantopedia for plant information and a unified, user-friendly platform that simplifies shopping and learning.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <p style="color: #999; font-size: 0.85rem;"><strong>Tools:</strong> VS Code</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">💼</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Personal Portfolio Website</h3>
-                        <p class="project-description">Developed a personal portfolio website to showcase skills, projects, and achievements with a clean, responsive design. Included sections like About, Projects, and Contact to enhance user experience.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Responsive</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <p style="color: #999; font-size: 0.85rem;"><strong>Tools:</strong> VS Code</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-title">📜 Introduction to HTML</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">📜 Introduction to CSS</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2026</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">📜 Web Development for Beginners</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">🐍 Python Intro Course</div>
-                    <div class="cert-provider">Nexademy</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">🎤 Communication Skills</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">🗣️ Public Speaking</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-title">🌐 Spoken English</div>
-                    <div class="cert-provider">Simplilearn</div>
-                    <div class="cert-date">2025</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Recognition</h2>
-            <div class="achievements-list">
-                <div class="achievement-card">
-                    <h3>🏆 2nd Rank - Academic & Performance</h3>
-                    <p>Secured 2nd Rank in the January Academic and Performance Evaluation at Academy for Careers in Technology (ACT), demonstrating consistent excellence in coursework and practical assignments.</p>
-                </div>
-                <div class="achievement-card">
-                    <h3>🏢 Industrial Visit - Freshworks</h3>
-                    <p>Selected for and participated in an Industrial Visit to Freshworks, gaining valuable exposure to a real-world IT work environment and understanding of professional software development practices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in new opportunities, exciting projects, and collaborations. Feel free to reach out!</p>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-text">
-                            <strong>Email</strong>
-                            <a href="mailto:gajulabeulah15@gmail.com" style="color: #667eea; text-decoration: none;">gajulabeulah15@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-text">
-                            <strong>Phone</strong>
-                            8519847264
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-text">
-                            <strong>Location</strong>
-                            Hyderabad, India
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🔗</div>
-                        <div class="contact-text">
-                            <strong>LinkedIn</strong>
-                            <a href="https://www.linkedin.com/in/beulah-gajula-2666b0366" style="color: #667eea; text-decoration: none;" target="_blank">View Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Gajula Beulah. All rights reserved. | Full Stack Developer | Made with ❤️ using HTML & CSS</p>
-        </div>
-    </footer>
-</body>
-</html> -->
+   
